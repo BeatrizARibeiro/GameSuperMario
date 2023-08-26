@@ -17,9 +17,7 @@ h1{
     padding: 5px;
     margin-bottom: 5px;
     font-size: 45px;
-    color: red;
-    -webkit-text-stroke: 1.5px #FFF;
-    text-stroke: 1.5px #FFF;
+    color: #FFFF;
 }
 
 body{
