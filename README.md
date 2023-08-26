@@ -1,4 +1,4 @@
-<h1 align="center"> 🍄 Joguinho Mario 🍄 </h1>
+<h1 align="center"> 🍄 Joguinho do Mario 🍄 </h1>
 
 <div align="center">
      <h3> Aplicação realizada utilizando javascript puro.</h3>
