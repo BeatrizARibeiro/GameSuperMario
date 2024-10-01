@@ -1,30 +1,58 @@
-const mario = document.querySelector('.mario')
+const character = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
+const opition = localStorage.info;
+
+if(opition == 3){
+    character.src = 'img/characters/luigi.gif'
+    character.style.width ='70px'
+}
+
+else if(opition == 2){
+    character.src = 'img/characters/yoshi.gif'
+    character.style.width ='100px'
+}
+
+else{
+    character.src = 'img/characters/mario.gif'
+}
 
 const jump = () => {
-    mario.classList.add('jump')
+    character.classList.add('jump')
 
     setTimeout(() => {
-        mario.classList.remove('jump')
+        character.classList.remove('jump')
     }, 500)
 }
 
 const loop = setInterval(() => {
 
     const pipePosition = pipe.offsetLeft
-    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px','');
+    const characterPosition = +window.getComputedStyle(character).bottom.replace('px','')
 
-    if(pipePosition <= 110 && pipePosition > 0 && marioPosition < 100){
+    if(pipePosition <= 110 && pipePosition > 0 && characterPosition < 100){
         pipe.style.animation = 'none'
         pipe.style.left = `${pipePosition}px` 
 
-        mario.style.animation = 'none'
-        mario.style.bottom = `${marioPosition}px` 
+        character.style.animation = 'none'
+        character.style.bottom = `${characterPosition}px` 
 
-        mario.src = 'img/game-over.png'
-        mario.style.width ='75px'
-        mario.style.marginLeft ='40px'
-
+        if(opition == 3){
+            character.src = 'img/characters/luigi-game-over.png'
+            character.style.width ='75px'
+            character.style.marginLeft ='40px'
+        }
+        
+        else if(opition == 2){
+            character.src = 'img/characters/yoshi-game-over.png'
+            character.style.width ='75px'
+            character.style.marginLeft ='30px'
+        }
+        
+        else{
+            character.src = 'img/characters/mario-game-over.png'
+            character.style.width ='75px'
+            character.style.marginLeft ='40px'
+        }
         clearInterval(loop)
     }
 

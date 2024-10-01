@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/character_change.js" defer></script>
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo_menor.png">
+    <title>Super Mario</title>
+</head>
+<body style="background-image: url('/img/backgorund_tl1.png'); background-repeat: no-repeat;background-size:cover;">
+    <div class="titulo">
+        <img src="img/logo.svg.png" width="250">
+    </div>
+    <div class="arrow">
+        <a href="index.html"><img src="/img/arrow.png"></a>
+    </div>
+    <div class="body">
+        <h2>Escolha seu personagem</h2>
+        
+        <div class="characters row"> 
+            <div class="mariop col">
+                <img src="/img/characters/mario.png" class="c1"><br>
+                <button name="mario" class="option" onclick="change_op(1)">MARIO</button>
+            </div>
+    
+            <div class="yoshi col">
+                <img src="/img/characters/yoshi.png" class="c2"><br>
+                <button name="yoshi" class="option" onclick="change_op(2)">YOSHI</button>
+            </div>
+    
+            <div class="luigi col">
+                <img src="/img/characters/luigi.png" class="c3"><br>
+                <button name="luigi" class="option" onclick="change_op(3)">LUIGI</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -2,17 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Press Start 2P';
 }
 
-@font-face {
-    font-family: 'Mario';
-    src: url(../SuperMario256.ttf) format('truetype');
-    font-weight: normal;
-    font-style: normal;
+body{
+    background-color: #436db9;
 }
 
-h1{
-    font-family: 'Mario';
+.titulo{
     text-align: center;
     padding: 5px;
     margin-bottom: 5px;
@@ -20,18 +17,23 @@ h1{
     color: #FFFF;
 }
 
-body{
-    background-color: rgba(0, 0, 0, 0.973);
-}
+h2{
+    text-align: center;
+    color: #FFFF;
+    text-shadow: 2.5px 2.5px black;
+    margin-top: 50px;
+} 
 
 .game-board{
-    width: 60%;
-    height: 500px;
-    border-bottom: 13px solid rgb(13, 185, 13);
+    width: 70%;
+    height: 470px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(#87CEEB, #E0F6FF);
+    background: linear-gradient(#436db9, #4ba7cc);
+    border: 1px solid rgba(255, 255, 255, 0.445);
+    border-radius: 5px;
+    border-bottom: none;
 }
 
 .pipe{
@@ -54,17 +56,117 @@ body{
 .clouds{
     top:10px; 
     position: absolute;
-    width: 450px;
+    width: 400px;
     animation: clouds-animation 10s infinite linear;
 }
 
-.chao{
+.floor{
+    background-image: url("/img/floor.png");
     background-color: rgb(150, 75, 0);
-    height: 35px;
-    width: 60%;
+    background-repeat: repeat-x;
+    height: 50px;
+    width: 70%;
     margin-left: auto;
     margin-right: auto; 
     margin-bottom: 5px;
+    background-repeat: repeat-x;
+}
+
+.menu{
+    text-align: left;
+    width: 40%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.opcoes{
+    margin-top: 60px;
+    margin-left:25%;   
+}
+
+.opcoes a{
+    text-decoration: none;
+    color: #FFFF;
+    text-shadow: 2px 2px black;
+    font-size: 30px;
+    margin-left:5px; 
+}
+
+.start{
+    width: 40px;
+    visibility: hidden;
+}
+
+.opcoes:hover img{
+    visibility:visible;
+}
+
+.characters img{
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.mariop, .yoshi, .luigi{
+    text-align: center;
+}
+
+.mariop button{
+    background-color: #D20000;
+}
+
+.mariop button:hover{
+    background-color: #8b0303;
+    color: #d8d5d5;
+}
+
+.yoshi button{
+    background-color:#96ee22;
+}
+
+.yoshi button:hover{
+    background-color: #52880a;
+    color: #d8d5d5;
+}
+
+.luigi button{
+    background-color:#00BF35;
+}
+
+.luigi button:hover{
+    background-color: #027e25;
+    color: #d8d5d5;
+}
+
+.characters button{
+    text-decoration: none;
+    color: #FFFF;
+    text-shadow: 2px 2px black;
+    border-radius: 30px;
+    padding: 10px;
+    border: 3px solid #000;
+}
+
+.characters button:hover{
+    cursor: pointer;
+}
+
+.characters{
+    margin: auto;
+    margin-top: 30px;
+    justify-content: space-around;
+    display: flex;
+    width: 80%;
+}
+
+.arrow{
+    text-align: left;
+}
+
+.arrow img{
+    width: 45px;
+    margin-left: 40px;
 }
 
 @keyframes pipe-animation{
