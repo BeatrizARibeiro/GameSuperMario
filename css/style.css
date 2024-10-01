@@ -61,8 +61,8 @@ h2{
 }
 
 .floor{
-    background-image: url("./img/floor.png");
     background-color: rgb(150, 75, 0);
+    background-image: url("./img/floor.png");
     background-repeat: repeat-x;
     height: 50px;
     width: 70%;
